@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laurus Food App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="light">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Meals</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Favorites</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <i class="fas fa-sun" id="lightModeIcon"></i>
+      <i class="fas fa-moon" id="darkModeIcon"></i>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Header -->
+    <header class="main-header">
+      <h1>Laurus Food App</h1>
+      <i class="fas fa-user-circle user-icon"></i>
+    </header>
+
+    <!-- Meal of the Week -->
+    <section class="meal-of-the-week">
+      <div class="meal-img">
+        <img src="img/meals/1.jpg" alt="Meal of the week" />
+      </div>
+      <div class="meal-info">
+        <h2>Meal of the Week</h2>
+        <p>This hearty dish features grass-fed steak with herb butter and roasted seasonal vegetables, perfect for carnivores and keto lovers alike.</p>
+        <button>Order Now</button>
+      </div>
+    </section>
+
+    <!-- Meal Cards -->
+    <section class="meal-grid">
+      <!-- JS or manual meal cards -->
+      <!-- Sample 8 cards using images 2.jpg to 9.jpg -->
+      <div class="meal-card">
+        <img src="img/meals/2.jpg" alt="Meal">
+        <h3>Spicy Tofu Bowl</h3>
+        <div class="meal-meta">
+          <span>Vegetarian</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <img src="img/meals/3.jpg" alt="Meal">
+        <h3>Grass-fed Burger</h3>
+        <div class="meal-meta">
+          <span>Carnivore</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <img src="img/meals/4.jpg" alt="Meal">
+        <h3>Salmon & Greens</h3>
+        <div class="meal-meta">
+          <span>Keto</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <img src="img/meals/5.jpg" alt="Meal">
+        <h3>Chocolate Cake</h3>
+        <div class="meal-meta">
+          <span>Dessert</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <img src="img/meals/6.jpg" alt="Meal">
+        <h3>Stuffed Peppers</h3>
+        <div class="meal-meta">
+          <span>Vegetarian</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <img src="img/meals/7.jpg" alt="Meal">
+        <h3>Chicken Skewers</h3>
+        <div class="meal-meta">
+          <span>Carnivore</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <img src="img/meals/8.jpg" alt="Meal">
+        <h3>Avocado Salad</h3>
+        <div class="meal-meta">
+          <span>Keto</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <img src="img/meals/9.jpg" alt="Meal">
+        <h3>Apple Pie</h3>
+        <div class="meal-meta">
+          <span>Dessert</span>
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
