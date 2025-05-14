@@ -1,30 +1,55 @@
 :root {
   --bg-color: #f8f8f8;
   --text-color: #222;
-  --sidebar-bg: #333;
+  --sidebar-bg: #ffffff; /* light sidebar */
+  --sidebar-text: #111;
+  --icon-color: #111;
+}
+
+/* Dark theme variables using a class toggle */
+.dark-theme {
+   --bg-color: #222;
+  --text-color: #f8f8f8;
+  --sidebar-bg: #111;    /* dark sidebar */
   --sidebar-text: #fff;
+  --icon-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  height: 100vh;
+  overflow: hidden; /* Prevent double scrollbar */
 }
 
+.layout-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  height: 100vh;
+}
+
+/* Header */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
+  grid-area: header;
   background-color: #222;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  z-index: 1000;
+  height: 60px;
+  width: 100%;
 }
 
 .left {
@@ -35,50 +60,69 @@ body {
 
 .menu-toggle {
   display: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
 .site-title {
-  font-size: 1.2rem;
   font-weight: bold;
 }
 
+/* Sidebar */
 .sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 200px;
-  height: calc(100vh - 60px);
+  grid-area: sidebar;
   background-color: var(--sidebar-bg);
   color: var(--sidebar-text);
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 10px;
-  transition: transform 0.3s ease;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
 }
 
 .sidebar .menu a {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: white;
+  color: var(--sidebar-text);
   text-decoration: none;
   padding: 10px 5px;
 }
 
-.theme-toggle {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+.sidebar .menu a i {
+  color: var(--icon-color);
 }
 
+.theme-toggle {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+/* Show only the moon icon by default */
+.theme-toggle .fa-sun {
+  display: none;
+}
+
+body.dark .fa-sun {
+  display: inline;
+}
+
+body.dark .fa-moon {
+  display: none;
+}
+
+/* Main Content */
 .main-content {
- margin: 25px auto;
- transform: translateX(60px);
-  width: 70%;
-  
+  grid-area: main;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
 }
 
 .meal-of-week {
@@ -90,8 +134,7 @@ body {
 }
 
 .meal-of-week img {
-  max-width: 100%;
-  width: 300px;
+  width: 500px;
   border-radius: 8px;
 }
 
@@ -101,12 +144,19 @@ body {
 
 .meal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  .meal-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .meal-card {
-  background: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -114,7 +164,10 @@ body {
 
 .meal-card img {
   width: 100%;
+  aspect-ratio: 4 / 3; /* or 16 / 9 or whatever ratio fits your design */
+  object-fit: cover;
   border-radius: 6px;
+  display: block;
 }
 
 .category-row {
@@ -129,21 +182,31 @@ body {
   color: #777;
 }
 
-/* Responsive Sidebar Toggle */
+/* Responsive */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .layout-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
   }
 
   .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 60px);
+    background-color: var(--sidebar-bg);
     transform: translateX(-100%);
+    z-index: 1000;
   }
 
-  .sidebar.open {
+  .sidebar.active {
     transform: translateX(0);
   }
 
-  .main-content {
-    margin-left: 0;
+  .menu-toggle {
+    display: block;
   }
 }

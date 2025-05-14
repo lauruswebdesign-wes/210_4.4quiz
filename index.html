@@ -4,112 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Laurus Food App</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header class="header">
-    <div class="left">
-      <i class="fas fa-bars menu-toggle" id="menuToggle"></i>
-      <span class="site-title">Laurus Food App</span>
-    </div>
-    <div class="right">
-      <i class="fas fa-user-circle"></i>
-    </div>
-  </header>
+  <div class="layout-grid">
+    <!-- Header -->
+    <header class="header">
+      <div class="left">
+        <i class="fas fa-bars menu-toggle" id="menuToggle"></i>
+        <span class="site-title">Laurus Food App</span>
+      </div>
+      <div class="right">
+        <i class="fas fa-user-circle fa-2x"></i>
+      </div>
+    </header>
 
-  <aside class="sidebar" id="sidebar">
-    <nav class="menu">
-      <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-      <a href="#"><i class="fas fa-hamburger"></i> Meals</a>
-      <a href="#"><i class="fas fa-list"></i> Categories</a>
-      <a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a>
-      <a href="#"><i class="fas fa-dumbbell"></i> Fitness Tracker</a>
-      <a href="#"><i class="fas fa-cog"></i> Settings</a>
-    </nav>
-    <div class="theme-toggle">
-      <i class="fas fa-sun"></i>
-      <i class="fas fa-moon"></i>
-    </div>
-  </aside>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="menu">
+        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-hamburger"></i> Meals</a>
+        <a href="#"><i class="fas fa-list"></i> Categories</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a>
+        <a href="#"><i class="fas fa-dumbbell"></i> Fitness Tracker</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      </nav>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </div>
+    </aside>
 
-  <main class="main-content">
-    <section class="meal-of-week">
-      <img src="img/meals/1.jpg" alt="Meal of the Week" />
-      <div class="meal-description">
-        <h2>Meal of the Week</h2>
-        <p>This week’s feature is a delicious herb-roasted chicken with seasonal vegetables. Packed with flavor and perfectly portioned for a healthy lifestyle.</p>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="meal-of-week">
+        <img src="img/meals/1.jpg" alt="Meal of the Week" />
+        <div class="meal-description">
+          <h2>Meal of the Week</h2>
+          <p>This week’s feature is a delicious herb-roasted chicken with seasonal vegetables.</p>
+        </div>
+      </section>
 
-    <section class="meal-grid">
-      <div class="meal-card">
-        <img src="img/meals/2.jpg" alt="Meal 2" />
-        <h3>Grilled Salmon</h3>
-        <div class="category-row">
-          <span class="category">Paleo</span>
-          <i class="fas fa-heart"></i>
+      <section class="meal-grid">
+        <!-- Repeat cards -->
+        <div class="meal-card">
+          <img src="img/meals/2.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-      <div class="meal-card">
-        <img src="img/meals/3.jpg" alt="Meal 3" />
-        <h3>Quinoa Bowl</h3>
-        <div class="category-row">
-          <span class="category">Vegan</span>
-          <i class="fas fa-heart"></i>
+         <div class="meal-card">
+          <img src="img/meals/3.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-      <div class="meal-card">
-        <img src="img/meals/4.jpg" alt="Meal 4" />
-        <h3>Turkey Wrap</h3>
-        <div class="category-row">
-          <span class="category">Low Carb</span>
-          <i class="fas fa-heart"></i>
+         <div class="meal-card">
+          <img src="img/meals/4.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-      <div class="meal-card">
-        <img src="img/meals/5.jpg" alt="Meal 5" />
-        <h3>Avocado Toast</h3>
-        <div class="category-row">
-          <span class="category">Vegetarian</span>
-          <i class="fas fa-heart"></i>
+         <div class="meal-card">
+          <img src="img/meals/5.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-      <div class="meal-card">
-        <img src="img/meals/6.jpg" alt="Meal 6" />
-        <h3>Chicken Stir Fry</h3>
-        <div class="category-row">
-          <span class="category">Gluten-Free</span>
-          <i class="fas fa-heart"></i>
+         <div class="meal-card">
+          <img src="img/meals/6.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-      <div class="meal-card">
-        <img src="img/meals/7.jpg" alt="Meal 7" />
-        <h3>Egg Muffins</h3>
-        <div class="category-row">
-          <span class="category">Keto</span>
-          <i class="fas fa-heart"></i>
+         <div class="meal-card">
+          <img src="img/meals/7.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-      <div class="meal-card">
-        <img src="img/meals/8.jpg" alt="Meal 8" />
-        <h3>Berry Smoothie</h3>
-        <div class="category-row">
-          <span class="category">Whole30</span>
-          <i class="fas fa-heart"></i>
+         <div class="meal-card">
+          <img src="img/meals/8.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-      <div class="meal-card">
-        <img src="img/meals/9.jpg" alt="Meal 9" />
-        <h3>Steak & Veggies</h3>
-        <div class="category-row">
-          <span class="category">High Protein</span>
-          <i class="fas fa-heart"></i>
+         <div class="meal-card">
+          <img src="img/meals/9.jpg" alt="Grilled Salmon" />
+          <h3>Grilled Salmon</h3>
+          <div class="category-row">
+            <span class="category">Paleo</span>
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+        <!-- Add more meal-cards here -->
+      </section>
+    </main>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
